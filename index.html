@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Be Happy, Rathimaa</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="screen on" id="s1">
+  <div class="heart">♥</div>
+  <h2>Access our world</h2>
+  <input id="nm" placeholder="Your name" autocomplete="off">
+  <input id="pw" type="password" placeholder="Password">
+  <div class="err" id="err"></div>
+  <button class="cta" onclick="unlock()">Unlock Surprise</button>
+</section>
+
+<section class="screen" id="sr">
+  <svg id="rib" viewBox="0 0 400 700" role="button" tabindex="0" aria-label="Tap the ribbon to open" onclick="untie()">
+    <g fill="#ff4fa3">
+      <rect class="bL" x="-3000" y="334" width="3200" height="32"/>
+      <rect class="bR" x="200" y="334" width="3200" height="32"/>
+      <rect class="bU" x="184" y="-3000" width="32" height="3350"/>
+      <rect class="bD" x="184" y="350" width="32" height="3350"/>
+      <g transform="translate(200 350) scale(1.9) translate(-120 -70)">
+        <path class="tL" d="M115 74 L78 132 L102 126 L126 80Z" fill="#e0267f"/>
+        <path class="tR" d="M125 74 L162 132 L138 126 L114 80Z" fill="#e0267f"/>
+        <path class="lL" d="M120 70 C58 0 18 32 50 62 C72 82 110 76 120 70Z"/>
+        <path class="lR" d="M120 70 C182 0 222 32 190 62 C168 82 130 76 120 70Z"/>
+        <circle class="kn" cx="120" cy="70" r="13" fill="#ff8cc6"/>
+      </g>
+    </g>
+  </svg>
+</section>
+
+<section class="screen" id="s2">
+  <div class="deco">✦ ♥ ✦</div>
+  <div class="script">Be Happy,<br>Rathimaa</div>
+  <div class="date">A DAY MADE JUST FOR YOU</div>
+  <button class="cta" onclick="go('s3')">Unfold Love</button>
+</section>
+
+<section class="screen" id="s3">
+  <h2>Our special video</h2>
+  <div class="video">
+    <video id="vid" src="WhatsApp%20Video%202026-11-25%20at%201.23.53%20PM.mp4" controls playsinline preload="metadata"></video>
+    <button class="play" id="play" aria-label="Play video" onclick="playVideo()">▶</button>
+  </div>
+  <div class="cap">SUNSET · TOGETHER</div>
+  <button class="cta next" onclick="go('s4')">Next</button>
+</section>
+
+<section class="screen" id="s4">
+  <h2>A letter from the heart</h2>
+  <div class="letter">Nee thinam sirichaa pothumae<br>Vera ethuvum venamae naan vaazhavae<br>Naan unna rasicha pothumae<br>Vera ethuvum venamae naan vaazhavae<br><span class="heart">♥</span></div>
+  <button class="cta next" onclick="go('s5')">Final surprise</button>
+</section>
+
+<section class="screen" id="s5">
+  <div class="deco">♥ ✦ ♥ ✦ ♥</div>
+  <div class="candle"></div>
+  <div class="script">Be Happy,<br>Rathimaa</div>
+  <div class="fin">The final surprise</div>
+  <button class="cta next" onclick="go('s1')">Start again</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

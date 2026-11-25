@@ -1,0 +1,44 @@
+:root{--bg:#12040e;--panel:#2a0a20;--pink:#ff4fa3;--pink2:#e0267f;--soft:#ffd6ea;--line:#ff6fb5;color-scheme:dark;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root{--bg:#12040e;--soft:#ffd6ea}}
+*{box-sizing:border-box}
+html,body{min-height:100%;margin:0}
+body{min-height:100dvh;padding:16px;background:radial-gradient(circle at 20% 10%,#5a0f40 0,transparent 45%),radial-gradient(circle at 85% 90%,#4a0a35 0,transparent 50%),var(--bg);color:var(--soft);font-family:'Jost',system-ui,sans-serif;display:flex;align-items:center;justify-content:center;overflow-x:hidden}
+.screen{display:none;width:min(380px,100%);padding:34px 22px;text-align:center;border:1.5px solid var(--line);border-radius:24px;background:linear-gradient(160deg,#2f0b24,#1a0615);box-shadow:0 0 28px rgba(255,79,163,.45),inset 0 0 22px rgba(255,79,163,.12)}
+.screen.on{display:block;animation:in .8s ease}
+@keyframes in{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
+h2{font-family:'Cormorant Garamond',serif;font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:1.3rem;margin:14px 0 18px;text-shadow:0 0 14px var(--pink)}
+.script{font-family:'Great Vibes',cursive;font-size:clamp(2.4rem,10vw,3.1rem);line-height:1.1;margin:12px 0;text-shadow:0 0 16px var(--pink);overflow-wrap:anywhere}
+.heart{color:var(--pink);font-size:1.85rem;text-shadow:0 0 16px var(--pink)}
+.deco{color:var(--pink);font-size:1.25rem;letter-spacing:.35em;text-shadow:0 0 12px var(--pink)}
+input{display:block;width:100%;margin:12px auto;padding:13px 18px;border-radius:30px;border:1px solid var(--line);background:#3a1030;color:var(--soft);font:inherit;outline:none}
+input:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
+input::placeholder{color:#c78aaa}
+button.cta{display:inline-block;width:100%;max-width:260px;margin-top:14px;padding:14px 28px;border:0;border-radius:30px;color:#fff;font:500 1rem 'Jost',sans-serif;letter-spacing:.06em;background:linear-gradient(90deg,var(--pink2),var(--pink));box-shadow:0 0 20px rgba(255,79,163,.7);cursor:pointer}
+.date{margin:10px 0 18px;letter-spacing:.18em;font-size:.8rem;opacity:.85}
+.err{color:#ff9cc7;min-height:1.2em;font-size:.85rem}
+.video{position:relative;aspect-ratio:16/9;max-height:52dvh;margin-inline:auto;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:linear-gradient(#3b1255,#ff5e8a 55%,#ffb347 75%,#1a0615 76%)}
+.video video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000;display:none}
+.play{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border:0;border-radius:50%;background:var(--pink);color:#fff;font-size:1.4rem;box-shadow:0 0 24px var(--pink);cursor:pointer}
+.cap{margin-top:14px;letter-spacing:.2em;font-size:.78rem}
+.letter{border:1px solid var(--line);border-radius:16px;padding:18px 14px;font-family:'Great Vibes',cursive;font-size:1.45rem;line-height:1.55}
+.candle{width:34px;height:30px;margin:18px auto 0;background:var(--pink);border-radius:4px;position:relative;box-shadow:0 0 18px var(--pink)}
+.candle:before{content:"";position:absolute;left:15px;top:-14px;width:4px;height:14px;background:#ffd6ea;border-radius:2px}
+.fin{font-family:'Cormorant Garamond',serif;letter-spacing:.2em;text-transform:uppercase;font-size:.9rem}
+.next{display:block;margin:20px auto 0}
+#sr{position:fixed;inset:0;margin:auto;width:min(410px,100vw);height:min(820px,100dvh);padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;overflow:hidden}
+#sr.on{display:block}
+#rib{display:block;width:100%;height:100%;overflow:visible;cursor:pointer;filter:drop-shadow(0 0 14px var(--pink))}
+#rib *{transform-box:fill-box;transform-origin:center;transition:transform 1.1s ease,opacity 1.1s ease}
+#rib.undo{animation:none}
+#rib.undo .bL{transform:translateX(-140px);opacity:0}
+#rib.undo .bR{transform:translateX(140px);opacity:0}
+#rib.undo .lL{transform:translate(-90px,-50px) rotate(-70deg);opacity:0}
+#rib.undo .lR{transform:translate(90px,-50px) rotate(70deg);opacity:0}
+#rib.undo .tL{transform:translate(-60px,90px) rotate(-40deg);opacity:0}
+#rib.undo .tR{transform:translate(60px,90px) rotate(40deg);opacity:0}
+#rib.undo .kn{transform:scale(0);opacity:0}
+#rib.undo .bU{transform:translateY(-400px);opacity:0}
+#rib.undo .bD{transform:translateY(400px);opacity:0}
+@keyframes wob{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
+@media (prefers-reduced-motion:reduce){.screen.on{animation:none}}
